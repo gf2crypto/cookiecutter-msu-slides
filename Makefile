@@ -1,5 +1,5 @@
-TEX_SOURCE := {{cookiecutter.project_name}}
-{% raw %}
+TEX_SOURCE := slides
+
 BUILDPARAM = -cd -f -pdf -interaction=nonstopmode -synctex=1 -latexoption=-shell-escape
 WATCHPARAM = -pvc -f -pdf -interaction=nonstopmode -synctex=1 -latexoption=-shell-escape
 TEMP_FILES = *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz *.xdv *.bbl *.bcf *.blg *.run.xml *.toc
@@ -31,4 +31,3 @@ help:
 	@printf "    help               display this help message\n"
 	@printf "    clean              delete temporary files\n"
 	@printf "    purge              delete temporary files and produced pdf\n"
-{% endraw %}

@@ -1,4 +1,3 @@
-{%- raw -%}
 %!TEX options=-shell-escape
 %!TEX program=pdflatex
 
@@ -93,11 +92,7 @@
   % dashed=false, 
   % url=false
 ]{biblatex}
-\addbibresource{
-{%- endraw -%}
-{{cookiecutter.project_name}}.bib
-{%- raw -%}
-}
+\addbibresource{slides.bib}
 
 % Команды шаблона
 \input{styles/commands}
@@ -133,4 +128,4 @@
 \Source
 
 \end{document}
-{% endraw %}
+
