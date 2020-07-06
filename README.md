@@ -26,7 +26,7 @@ __ВНИМАНИЕ! `make`-файлы используют `latexmk` для ко
 ## Установка вручную
 В ветке `example` содержится интерполированная версия шаблона. Поэтому, если возникли сложности с установкой `python` или `cookiecutter`, то можно скачать файлы из этой ветки и дальше адаптировать их вручную под конкретный проект.
 
-Скачать ветку можно по [ссылке]() или сначала клонировать репозиторий с помощью команды `git clone https://github.com/gf2crypto/cookiecutter-msu-slides.git`, а потом перейти на ветку `example`, выполнив в папке клонированного репозитория команду `git checkout example`.
+Скачать ветку можно по ссылке: [zip](https://github.com/gf2crypto/cookiecutter-msu-slides/archive/example.zip) или сначала клонировать репозиторий с помощью команды `git clone https://github.com/gf2crypto/cookiecutter-msu-slides.git`, а потом перейти на ветку `example`, выполнив в папке клонированного репозитория команду `git checkout example`.
 
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
