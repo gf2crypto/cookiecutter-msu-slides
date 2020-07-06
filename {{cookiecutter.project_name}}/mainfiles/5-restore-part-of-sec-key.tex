@@ -1,0 +1,25 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section{Восстановление части ключа}
+
+\begin{frame}
+\frametitle{Восстановление части ключа}
+\begin{block}{Определение}
+ $\widehat{\mathcal A}_u(RM(r,m))$~--- это множество перестановок вида $\nabla \aurm{\gamma}$, где $\aurm{\gamma}$~--- это перестановка из группы расширенных автоморфизмов $\mathcal A_u(RM(r,m))$, а $\nabla$~--- это произвольная перестановка блоков матрицы $(\matr{H}_1\matr{R}\|\ldots\|\matr{H}_u\matr{R})$.
+\end{block}
+\begin{block}{Утвеждение}
+Справедливо равенство
+\begin{equation*}
+\bigcap_{\matr{H}_1,\ldots,\matr{H}_u\in GL(k,2)}\mathcal G(\matr{H}_1,\ldots,\matr{H}_u)=\widehat{\mathcal A}_u(RM(r,m)),
+\end{equation*}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Восстановление части ключа}
+\begin{block}{Теорема 4}
+Пусть перестановка $\Gamma=\Gamma_{I\leftrightarrow J}\gamma[1]\sigma[2]$ принадлежит множеству $\mathcal G(\matr{E},\matr{H})$.  Тогда используя эту перестановку, можно построить $p_{\overline{I}}+p_{\overline{J}}$ линейно независимых уравнений относительно $n$ неизвестных $\matr{H}R_{1}$, $\matr{H}R_{2}$, $\ldots$, $\matr{H}R_{n}$. Здесь $R_i$ столбец с номером $i$ порождающей матрицы кода Рида--Маллера $RM(r,m)$.
+\end{block}
+\end{frame}
+{% endraw %}

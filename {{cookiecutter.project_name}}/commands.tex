@@ -1,0 +1,16 @@
+%!TEX root = {{cookiecutter.project_name}}.tex
+{%- raw %}
+%% Place your additional commands and definitions here
+%% For example:
+%% 			\DeclareMathOperator{\supp}{supp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{r_thm}{Теорема}
+\renewenvironment{theorem}{\begin{r_thm}}{\end{r_thm}}
+
+\newcommand{\matr}[1]{{#1}}
+\newcommand{\aurm}[1]{{#1}}
+\newcommand{\vect}[1]{{#1}}
+\newcommand*{\Aut}{\mathop{\mathrm{Aut}}}
+\newcommand*{\vectrow}[1]{\overrightarrow{#1}}
+{% endraw %}

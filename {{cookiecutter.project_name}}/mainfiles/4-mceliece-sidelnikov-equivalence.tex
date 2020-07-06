@@ -1,0 +1,33 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section[Об эквивалентности]{О полиномиальной эквивалентности криптосистем Мак-Элиса и Мак-Элиса--Сидельникова с ограничениями на ключевое пространство.}
+
+\begin{frame}
+\frametitle{Задача mcRMi}
+\begin{block}{Вход}
+Число $m$ большее $2r$ и  $1\leqslant i\leqslant k$, матрица $\matr{G}=\matr{H}'\cdot \matr{R}'\cdot \gamma'$, где $\matr{H}'$~--- невырожденная двоичная $(k-1)\times (k-1)$-матрица, $\matr{R}'$~--- $((k-1)\times n)$-матрица, получающаяся из порождающей матрицы $\matr{R}$ кода Рида--Маллера $RM(r,m)$ выкидыванием строки с номером $i$ и $\gamma'$~--- перестановочная $(n\times n)$-матрица.
+\end{block}
+\begin{block}{Найти}
+ Невырожденную матрицу $\matr{M}'$ размера $(k-1)\times (k-1)$ и перестановочную $(n\times n)$-матрицу $\sigma'$, для которых  найдётся невырожденная $((k-1)\times (k-1))$-матрица $\matr{L}'$, что  \[\matr{M}'\cdot \matr{G}\cdot \sigma'=\matr{L}'\cdot \matr{R}'.\]
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Задача mcSRM}
+\begin{block}{Вход}
+Матрица $\matr{G}=(\matr{H}_1\cdot \matr{R}\|\matr{H}_2\cdot \matr{R})\cdot \Delta$, где $\matr{H}_1$ и $\matr{H}_2$~--- невырожденные двоичные $(k\times k)$-матрицы, принадлежащие классу эквивалентности $[(\matr{H},\matr{H}\matr{T}^i_{\widetilde\alpha},\Gamma)]$  и $\Delta$~--- перестановочная $(2n\times 2n)$-матрица.
+\end{block}
+\begin{block}{Найти}
+Невырожденные матрицы $\matr{H}'_1$ и $\matr{H}'_2$ размера $(k\times k)$ и перестановочную $(2n\times 2n)$-матрицу $\Delta'$ такие, что \[\matr{G}\cdot \Delta'=(\matr{H}'_1\matr{R}\|\matr{H}'_2\matr{R}).\]
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Эквивалентность}
+\begin{block}{Теорема 3}
+Пусть существует алгоритм, который решает задачу mcRMi за полиномиальное время.
+Тогда существует алгоритм, который решает задачу mcSRM за полиномиальное время.
+\end{block}
+\end{frame}
+{% endraw %}

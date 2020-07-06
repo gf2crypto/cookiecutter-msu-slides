@@ -1,0 +1,90 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section{Криптосистема Мак-Элиса--Сидельникова }
+
+\subsection[Устройство]{Устройство криптосистемы Мак-Элиса--Сидельникова}
+
+\begin{frame}
+  \frametitle{Общие сведения}
+\begin{itemize}
+  \item Предложена В.М.~Сидельниковым в 1994 году как альтернатива криптосистеме Мак-Элиса.
+  \pause
+  \item Оригинальная криптосистема строится на основе двоичных кодов Рида--Маллера $RM(r,m)$.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Секретный и открытый ключ.}
+\begin{itemize}
+  \item Параметры:
+  \begin{itemize}
+    \item
+      $r$~--- натуральное число;
+    \item
+      $m$~--- натуральное число, $m\geqslant r$;
+   \item $R$~--- порождающая матрица кода Рида--Маллера $RM(r,m)$;
+   \item $u$~--- натуральное число.
+    \end{itemize}
+    \pause
+  \item Секретный ключ:
+    \begin{itemize}
+    \item
+      $H_1,\ldots,H_u$~--- невырожденные $(k\times k)$-матрицы над полем $GF(2)$.
+    \item
+      $\Gamma$~--- перестановочная $(un\times un)$-матрица, $\Gamma\in S_{u\cdot n}$.
+    \end{itemize}
+    \pause
+  \item
+    Открытый ключ~--- матрица
+    $$G'=(H_1R\|H_2R\|\ldots\|H_uR)\Gamma.$$
+  \end{itemize}
+
+\end{frame}
+
+
+\subsection{Пространство ключей}
+
+\begin{frame}
+  \frametitle{Основные определения.}
+  \begin{itemize}
+    \item
+        Секретные ключи $(H'_1,\dots,H'_u,\Gamma')$ и $(H''_1,\ldots,H''_u,\Gamma'')$
+        называются \alert{эквивалентными}, если
+        $$
+        (H'_1R\|\ldots\|H'_uR)\Gamma'=(H''_1R\|\ldots\|H''_uR)\Gamma''
+        $$
+    \item
+        $[(H_1,\ldots,H_u,\Gamma)]$~--- класс эквивалентности с
+        представителем $(H_1,\ldots,H_u,\Gamma)$.
+        \pause
+    \item
+        Введём множество $\mathcal G(H_1,\ldots,H_u)$:
+        \begin{eqnarray*}
+            \mathcal G(H_1,\ldots,H_u)=\{\Gamma\in S_{un}|
+            \exists H'_1,\ldots, H'_u\text{ такие, что}\\
+            (H_1R\|\ldots\|H_uR)\Gamma=(H'_1R\|\ldots\|H'_uR)\}
+        \end{eqnarray*}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Оценка мощности множества открытых ключей}
+\begin{block}{Теорема 1}
+Справедливы неравенства для числа $|\mathcal E|$ открытых ключей криптосистемы
+Мак-Элиса--Сидельникова с $u>1$ блоками на основе кодов Рида--Маллера $RM(r,m)$
+$$
+\frac{(u\cdot n)!h_k}{(u!)^n|Aut(RM(r,m))|}\leqslant |\mathcal E|<\frac{(u\cdot
+n)!(h_k)^u}{u!|Aut(RM(r,m))|^u}.
+$$
+Здесь
+\begin{itemize}
+\item $n$~--- длина кода Рида--Маллера $RM(r,m)$,
+\item $h_k$~--- число обратимых $(k\times k)$-матриц над полем $GF(2)$,
+\item $Aut(RM(r,m))$~--- группа автоморфизмов кода $RM(r,m)$.
+\end{itemize}
+\end{block}
+Оценка сверху принадлежит Г.А. Карпунину (2004).
+\end{frame}
+{% endraw %}

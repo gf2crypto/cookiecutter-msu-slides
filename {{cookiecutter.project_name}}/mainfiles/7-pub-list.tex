@@ -1,0 +1,15 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section{Список публикаций}
+
+\begin{frame}
+\frametitle{Список публикаций (3 из 7), в журналах  ВАК --- 2.}
+\nocite{*}
+\begin{alertblock}{Из списка ВАК}
+\printbibliography[keyword=VAK, title=Из списка ВАК]
+\end{alertblock}
+\begin{exampleblock}{Другие}
+\printbibliography[keyword=NoVAK, title=Из списка ВАК]
+\end{exampleblock}
+\end{frame}
+{% endraw %}

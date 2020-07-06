@@ -1,0 +1,74 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section[Описание открытых ключей]{Описание множества открытых ключей}
+
+\subsection[Произвольное число блоков]{Случай произвольного числа блоков}
+
+\begin{frame}
+  \frametitle{Множество эквивалентных ключей.}
+\begin{block}{Теорема 2a}
+Пусть
+\begin{itemize}
+\item матрицы $D_1,D_2,\ldots, D_u$ задают автоморфизмы $\sigma_1,\sigma_2,\ldots,\sigma_u$ кода Рида--Маллера $RM(r,m)$;
+\item $\sigma_j[i]$~--- расширенный автоморфизм, соответствующий $\sigma_j$,
+\item $H$~--- любая невырожденная матрица.
+\end{itemize}
+Тогда класс эквивалентности $[(HD_1,HD_2,\ldots,HD_u,\Gamma)]$ состоит из кортежей вида
+\begin{eqnarray*}
+(HA_1,HA_2,\ldots,HA_u,\gamma^{-1}_1[1]\cdot\gamma^{-1}_2[2]\ldots
+\gamma^{-1}_u[u]\Gamma'
+\cdot\sigma_1[1]\cdot\sigma_2[2]\ldots\sigma_u[u]\Gamma),
+\end{eqnarray*}
+здесь для $\Gamma'$ выполнено $(R\|R\|\ldots\|R)\Gamma'=(R\|R\|\ldots\|R).$
+\end{block}
+\end{frame}
+
+\subsection[Два блока]{Случай двух блоков}
+
+\begin{frame}
+\frametitle{Специальный тип матриц.}
+Рассмотрим матрицу $T^I_{\widetilde{A}}$, $I=\{i_1,i_2,\ldots,i_p\}$ вида
+\begin{equation*}
+\left(\begin{tabular}{ccccccccccc}
+&               &         &       &$i_1$        &       &$i_2$       &      &$i_p$       &      &\\
+&               &         &       &$\downarrow$ &       &$\downarrow$&      &$\downarrow$&       &\\
+&1              &0        &$\ldots$ &0          &$\ldots$ &0         &$\ldots$&0         &$\ldots$&0\\
+&0              &1        &$\ldots$ &0          &$\ldots$ &0         &$\ldots$&0         &$\ldots$&0\\
+&$\vdots$         &$\vdots$   &$\ldots$ &$\vdots$     &$\ldots$ &$\vdots$    &$\ldots$&$\vdots$    &$\ldots$&$\vdots$     \\
+$i_1 \rightarrow$ &$\alpha^{i_1}_1$ &$\alpha^{i_1}_2$ &$\ldots$ &$\alpha^{i_1}_{i_1}$&$\ldots$&$\alpha^{i_1}_{i_2}$&$\ldots$ &$\alpha^{i_1}_{i_p}$&$\ldots$ &$\alpha^{i_1}_{k}$ \\
+               &$\vdots$   &$\vdots$   &$\ldots$ &$\vdots$&\ldots&$\vdots$     &$\ldots$ &$\vdots$&$\ldots$ &$\vdots$     \\
+$i_2\rightarrow$ &$\alpha^{i_2}_1$ &$\alpha^{i_2}_2$ &$\ldots$ &$\alpha^{i_2}_{i_1}$&$\ldots$ &$\alpha^{i_2}_{i_2}$&$\ldots$ &$\alpha^{i_2}_{i_p}$        &$\ldots$ &$\alpha^{i_2}_{k}$ \\
+               &$\vdots$   &$\vdots$   &$\ldots$ &$\vdots$&$\ldots$ &$\vdots$&$\ldots$ &$\vdots$      &$\ldots$ &$\vdots$     \\
+$i_p\rightarrow$ &$\alpha^{i_p}_1$ &$\alpha^{i_p}_2$ &$\ldots$ &$\alpha^{i_p}_{i_1}$&$\ldots$ &$\alpha^{i_p}_{i_2}$  &$\ldots$ &$\alpha^{i_p}_{i_p}$      &$\ldots$ &$\alpha^{i_p}_{k}$ \\
+               &$\vdots$   &$\vdots$   &$\ldots$ &$\vdots$ &$\ldots$ &$\vdots$&$\ldots$ &$\vdots$        &$\ldots$ &$\vdots$     \\
+               &0        &0        &$\ldots$ &0 &$\ldots$ &0     &$\ldots$ &0     &$\ldots$ &1          \\
+\end{tabular}\right),
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Первый случай. $|I|=1$,  $I=\{i\}$.}
+\begin{block}{Теорема 2b}
+Класс эквивалентности $[(\matr{H},\matr{H}\matr{T}^{i}_{\widetilde{\vect{\alpha}}},\Gamma)]$ состоит из кортежей вида
+\begin{equation*}(\matr{H}\matr{T}^{i}_{\widetilde{\vect{\beta}}}\matr{D}_1,\matr{H}\matr{T}^{i}_{\widetilde{\vect{\gamma}}}\matr{D}_2,\aurm{\sigma_L}^{-1}[1]\aurm{\sigma}_R^{-1}[2]\Gamma'^{-1}\Gamma).\end{equation*}
+Здесь $\aurm{\sigma}_L,\aurm{\sigma}_R$~--- автоморфизмы кода Рида--Маллера $RM(r,m)$, соответствующие матрицам $\matr{D_1}$ и $\matr{D_2}$, а для перестановки $\Gamma'$ выполняются два условия
+\begin{itemize}
+\item[1)] Если $\matr{R}'$~--- $(k-1)\times n$-матрица, получающаяся удалением строки с номером $i$ из матрицы $\matr{R}$, то
+$(\matr{R}'\|\matr{R}')\Gamma'=(\matr{R}'\|\matr{R}');$
+\item[2)] Если $\vectrow{r_i}$~--- строка матрицы $\matr{R}$ с номером $i$, то
+\begin{equation*}(\vectrow{r_i}\|\widetilde{\vect{\alpha}} \matr{R})\Gamma'=(\widetilde{\vect{\beta}} \matr{R}\|\widetilde{\vect{\gamma}} \matr{R})\in RM(r,m)\times RM(r,m).\end{equation*}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Третий случай. $|I|>1$}
+\begin{block}{Теорема 2c}
+Пусть $\Gamma^{-1}_g$~--- перестановка из $\mathcal G(\matr{E},\matr{T}^{I}_{\widetilde{A}})$, представимая в виде $\Gamma'\sigma_L[1]\sigma_R[2]$, где $\Gamma'$ такая перестановка, что $(\matr{R}'\|\matr{R}')\Gamma'=(\matr{R}'\|\matr{R}').$ Тогда класс эквивалентности $[(\matr{H},\matr{H}\matr{T}^I_{\widetilde{A}}, \Gamma)]$, содержит кортежи вида
+\begin{equation*}(\matr{H}\matr{T}^{I}_{\widetilde{B}}\matr{D}_1,\matr{H}\matr{T}^{I}_{\widetilde{C}}\matr{D}_2,\aurm{\sigma_L}^{-1}[1]\aurm{\sigma}_R^{-1}[2]\Gamma'^{-1}\Gamma).\end{equation*}
+Здесь $\aurm{\sigma}_L,\aurm{\sigma}_R$~--- автоморфизмы кода Рида--Маллера $RM(r,m)$, соответствующие матрицам $\matr{D_1}$ и $\matr{D_2}$, $\widetilde{B}=\{\widetilde{\beta}^{i_1},\widetilde{\beta}^{i_2}, \ldots, \widetilde{\beta}^{i_p}\}$, $\widetilde{C}=\{\widetilde{\gamma}^{i_1},\widetilde{\gamma}^{i_2}, \ldots, \widetilde{\gamma}^{i_p}\}$, а для перестановки $\Gamma'$ выполняется условие
+\[(\vectrow{r_i}\|\widetilde{\vect{\alpha}}^{i} \matr{R})\Gamma'=(\widetilde{\vect{\beta}}^{i} \matr{R}\|\widetilde{\vect{\gamma}}^{i} \matr{R})\in RM(r,m)\times RM(r,m) \text{ для любого } i\in I.\]
+\end{block}
+\end{frame}
+{% endraw %}

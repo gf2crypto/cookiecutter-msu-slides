@@ -1,0 +1,32 @@
+%!TEX root = ../{{cookiecutter.project_name}}.tex
+{% raw %}
+\section{Криптосистема Мак-Элиса}
+
+\begin{frame}
+  \frametitle{Криптосистемы Мак-Элиса}
+  %\framesubtitle{Subtitles are optional.}
+  % - A title should summarize the slide in an understandable fashion
+  %   for anyone how does not follow everything on the slide itself.
+
+  \begin{itemize}
+  \item
+    Криптосистема с открытым ключом. Предложена в 1978 году Р.Дж.~Мак-Элисом.
+  \pause
+  \item
+    Стойкость основана на трудности некоторых задачах теории кодов, исправляющих ошибки.
+  \pause
+  \item
+        Р.Дж.~Мак-Элис предложил использовать  семейство кодов
+        Гоппы с параметрами $[1024,524,101]$;
+        \pause
+  \item
+        Г. Нидеррайтер в 1986 году предложил использовать обобщённые коды
+        Рида--Соломона. В 1992 году В.М.~Сидельников и
+        С.О.~Шестаков взломали криптосистему Мак-Элиса на основе
+        этих кодов.
+        \pause
+  \item
+        В.М.~Сидельников в 1994 году предложил использовать двоичные коды Рида--Маллера $RM(r,m)$.
+  \end{itemize}
+\end{frame}
+{% endraw %}
